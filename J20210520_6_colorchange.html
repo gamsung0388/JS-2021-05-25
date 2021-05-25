@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>칼라체인지</title>
+    <style>
+        #box{
+            display: flex;
+            width: 100%;
+            border: none;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            border:  1px solid black;
+        }
+
+    </style>
+    <script>
+        function changeColor(id){
+            console.log(id.style);
+            console.log(id.style.backgroundColor);
+            
+            var boxcolor = id.style.backgroundColor;
+            // 문자열     =  필드 ( 속성)
+            if(boxcolor=='red'){
+                id.style.backgroundColor = 'orange';
+            }else {
+                id.style.backgroundColor = 'red';}
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        <div onclick="changeColor(this)"></div>
+        <div onclick="changeColor(this)"></div>
+        <div onclick="changeColor(this)"></div>
+        <div onclick="changeColor(this)"></div>
+        <div onclick="changeColor(this)"></div>
+        <div onclick="changeColor(this)"></div>
+        <div onclick="changeColor(this)"></div>
+        <div onclick="changeColor(this)"></div>
+        <div onclick="changeColor(this)"></div>
+        <div onclick="changeColor(this)"></div>
+        <div onclick="changeColor(this)"></div>
+    </div>
+    
+</body>
+</html>

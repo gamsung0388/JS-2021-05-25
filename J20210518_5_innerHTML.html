@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML</title>
+    <script>
+        function addlang(){
+            //추가된 언어
+            var langEle = document.getElementById('lang');
+            //추가된 언어 리스트
+            var langlistEle =  document.getElementById('langlist');
+           
+            var lang = langEle.value;
+            // console.log(lang);
+            
+            var inner = document.getElementById('langlist').innerHTML;
+            langlistEle.innerHTML=inner+lang+'<br>';
+
+            langEle.value = ' ';
+            langEle.focus(); //포커스이동
+        }
+
+    </script>
+</head>
+<body>
+    사용가능언어:
+    <input type="text" id = "lang" >
+    <button onclick="addlang()">추가</button>
+    <hr>
+    사용가능언어<br>
+    <div id = "langlist"></div>
+</body>
+</html>

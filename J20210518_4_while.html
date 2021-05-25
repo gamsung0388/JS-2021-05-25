@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while문</title>
+    <script>
+        //1~10까지 출력
+        // var a = 0;
+        // while(true){
+        //     a++;
+        //     if(a>10) break;
+        //     document.write(a + '<br>');
+        // }
+
+        function sum(){
+            //1~100까지 합
+ 
+            var s =0, i = 0;
+            var lastNum = document.getElementById('LastNum').value;
+            while(true){
+                i++;
+                if(i >lastNum)break;
+                s+=i;
+            }
+
+                document.getElementById('sumCal').value = s;
+        }
+        
+        //실습)난수
+        
+        function myRandom(){
+            var str =''; 
+            var cnt = document.getElementById('cnt').value;
+            alert(cnt);
+            i = 0;
+            while(i<cnt){
+                i++
+                r = Math.random();
+                console.log(r);
+                str+= r + '<br>';
+                
+            }
+            console.log(str);
+            document.getElementById('divRamdom').innerHTML =str;
+        }
+
+    </script>
+</head>
+<body>
+    마지막수:  <input type="text" id = "LastNum"><br>
+    합계: <input type="text" id= "sumCal"><br>
+    <input type="button" value="합계산" onclick="sum()">
+    <hr>
+    난수의 개수<br>
+    <input type="text" id="cnt"><br>
+    <button onclick="myRandom()">생성</button>
+    <div id = "divRamdom"></div>
+
+
+</body>
+</html>

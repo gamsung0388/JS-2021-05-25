@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>만들기</title>
+    <script>
+        function menuAdd(){
+            // alert('메뉴추가');
+            var menu = prompt('점수메뉴는?');
+            //엘리먼트 생성
+            var li = document.createElement('li'); //<li></li> 생성
+            var node =document.createTextNode(menu); //메뉴
+            li.appendChild(node); //<li>menu</li>
+            document.getElementById('menuList').appendChild(li); //메뉴리스트에 추가
+        }
+        
+
+
+        
+    </script>
+</head>
+<body>
+    <input type="button" value="추가" onclick="menuAdd()">
+    <div>
+        <ul id="menuList">
+           
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <script>
+        function JoinCheck(){
+            //서버에 데이터를 전송하기위해서 form안에 데이터를 입력
+            //form의 이름으로 데이터 접근
+            var userid = joinForm.userid.value;
+            var userpw = joinForm.userpw.value;
+            var username = joinForm.username.value;
+            var userbirth = joinForm.userbirth.value;
+            var useremail = joinForm.useremail.value;
+        
+            if(userid==''){ //아이디체크
+                alert("아이디를 입력해주세요!");
+                joinForm.userid.focus();
+                return;
+            }else if(userpw ==''){//비밀번호
+                alert("비밀번호를 입력해주세요!");
+                joinForm.userpw.focus();
+                return;
+            }else if(username==''){//이름
+                alert("이름을 입력해주세요!");
+                joinForm.username.focus();
+                return;
+            }else if(userbirth==''){//생년월일
+                alert("생년월일을 입력해주세요!");
+                joinForm.userbirth.focus();
+                return;
+            }else if(useremail==''){//이메일
+                alert("이메일를 입력해주세요!");
+                joinForm.useremail.focus();
+                return;
+            } else{
+                //form의 데이터를 서버로 보내기
+                joinForm.submit();
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    
+    <h2>회원가입</h2>
+    <fieldset>
+        <form name="joinForm" action="">
+            <table>
+                <tr>
+                    <th>아이디</th>
+                    <td><input type="text" name="userid"></td>
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <td>  <input type="password" name="userpw" ></td>
+                </tr>
+                <tr>
+                    <th>이름</th>
+                    <td><input type="text" name="username"></td>
+                </tr>
+                <tr>
+                    <th>생년월일</th>
+                    <td><input type="date" name="userbirth"></td>
+                </tr>
+                <tr>
+                    <th>이메일</th>
+                    <td><input type="email" name="useremail"></td>
+                </tr>
+                <tr>
+                    <th>가입인사</th>
+                    <td><textarea name="hello" cols="22" rows="5"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <button type="button" onclick="JoinCheck()">회원가입</button>
+                        <button type="reset">취소</button>
+                    </td>
+                </tr>
+            </table>
+            
+        </form> 
+    </fieldset>
+   
+    
+</body>
+</html>

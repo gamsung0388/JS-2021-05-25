@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크박스</title>
+    <script>
+        function selfood(){
+            var foodie = document.getElementsByName('food');
+            // console.log(foodie.length);
+            var str = '<ol>';
+            for (var i = 0; i < foodie.length; i++) {
+                if(foodie[i].checked){
+                    str += '<li>'+ foodie[i].value + '</li>' ;
+                }
+                
+            }
+            document.getElementById('favfood').innerHTML =str ;
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+    <input type="checkbox" name="food" id="ja" value="자장면">자장면
+    <input type="checkbox" name="food" id="pi"  value="피자">피자
+    <input type="checkbox" name="food" id="sul"  value="설렁탕">설렁탕
+    <input type="checkbox" name="food" id="su"  value="스파게티">스파게티<br>
+    </fieldset>
+    <button onclick="selfood()">선택목록 추가</button>
+    <hr>
+    내가 좋아하는 음식들은
+    <div id="favfood">
+
+    </div>
+    
+    
+    
+
+
+
+</body>
+</html>

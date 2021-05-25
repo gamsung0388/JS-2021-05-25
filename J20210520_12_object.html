@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체리터너리</title>
+     <script>
+        //key,value
+        // var item = {name:'새우깡', price: 1000}
+        // console.log(item);
+        // console.log(item['name']);
+        // console.log(item['price'])
+
+        // //
+        // const name = '홍길동';
+        // const age = 20;
+        // const member = {
+        //     name:name,
+        //     age:age
+        //  };
+        // console.log(member['name']);
+        // console.log(member['age']);
+         
+        //  //키와 변수이름 동일할때 변수 생략가능
+        //  const member2 = {
+        //     name,
+        //     age
+        //  }
+
+        //  console.log(member2['name']);
+        //  console.log(member2['age']);
+
+        //입력한 정보를 객체로 변환해서 콘솔창에 출력
+        function inputchange(){
+           const myid = inputlogin.userid.value;
+           const mypw = inputlogin.userpw.value;
+           const login = {
+               myid,
+               mypw
+           }
+           console.log(login['myid']);
+           console.log(login['mypw']);
+        }
+
+
+     </script>
+</head>
+<body>
+    <form name="inputlogin" action="">
+        아이디<input type="text" name="userid" id=""><br>
+        비밀번호<input type="password" name="userpw" id=""><br>
+        <input type="button" onclick="inputchange()" value="로그인">
+
+    </form>
+
+
+</body>
+</html>

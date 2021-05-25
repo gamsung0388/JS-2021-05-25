@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문</title>
+    <style>
+        .num{
+            color: rgb(31, 247, 200);
+            font-size: 23px;
+        }
+        .red{
+            color: red;
+            font-size: 23px;
+        }
+        .blue{
+            color: blue;
+            font-size: 23px;
+        }
+        .gcolor{
+            color: cadetblue;
+            font-size: 23px;
+        }
+    </style>
+    <script>
+        // //1~10출력
+        // for(var i = 1; i<11 ; i++){
+        //     document.write('<p class = "num">'+i+'</p>');
+            
+        // }
+
+        //실습 1~10 : 짝 홀 수 출력
+        // 짝수는 빨강 홀수는 파랑으로
+        // for(var i =1; i < 11; i++){
+        //     if(i%2==0){
+        //         document.write('<span class = "red">'+ i + '짝수' + '<br>' + '</span>')
+        //     }else{
+        //         document.write('<span class = "blue">' + i + '홀수' + '<br>' + '</span>')
+        //     }
+        // }
+        //실습 구구단
+        function gugudan(){
+            var dan = document.getElementById('dan').value;
+            alert(dan);
+            var str = '';
+            for(i=1;i<10;i++){
+                str+=dan+'*'+i+'=' + dan*i + '<br>'
+            }
+            console.log(str);
+            document.getElementById('guguPrint').innerHTML = str
+        }
+        
+    </script>
+</head>
+<body>
+    <input type="text" id="dan"><br>
+    <input type="button" onclick="gugudan()" value="구구단계산1">
+    <!--submit 서버와 데이터 전송 버튼 -->
+    <input type="submit" onclick="gugudan()" value="구구단계산2">
+    <button onclick="gugudan()">구구단 계산3</button>
+    <div id = "guguPrint">
+
+
+    </div>
+</body>
+</html>

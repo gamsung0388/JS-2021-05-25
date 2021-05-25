@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+    <script>
+    //      //변수: 암시적 선언
+    //     a = '자바스크립트 언어';
+    //     // document (Dom) 내장객체 
+    //     document.write(a + '<br>');
+    //     // console : 내장객체
+    //     //크롬 f12(개발자 도구)=>console창에서 확인
+    //     console.log(a); 
+    //     console.log(typeof a);
+        
+    //    //변수:명시적 선언
+    //     var a = 10;
+    //     var b = 3.14;
+    //     document.write(typeof a +'<br>') ;
+    //     console.log(typeof a);
+
+    //     document.write(b+'<br>')
+    //     document.write(typeof b);
+    //     console.log(typeof b);
+
+    //     //중복선언(변수)안됨 / 값 변경 됨
+    //     // let c = 20;
+        // console.log(c);
+        // c =30;
+        // console.log(c);
+        // //상수 : 값 변경 안됨
+        // const d = 100;
+        // console.log(d);
+        // //d= 200; 에러
+
+        // //산술연산자 : + - * / %
+        // document.write('<hr>');
+        // var a = 10, b= 20;
+
+        // document.write('덧셈: '+(a+b)+'<br>');
+        // document.write('뺄셈: '+(a-b)+'<br>');
+        // document.write('곱: '+(a*b)+'<br>');
+        // document.write('나누기: '+(a/b)+'<br>');
+        // document.write('나머지: '+(a%b)+'<br>');
+
+        // //반올림
+        // document.write(Math.round(20.3)); 
+        // console.log(Math.round(20.3));
+
+        // //소수점 두자리 자르기
+        // var num = 123.123456780;
+        // var result = num.toFixed(3);
+        // document.write(result);
+        // console.log(typeof result);
+        // console.log(Number(result));
+        
+        // result *= 1;
+        // console.log(typeof result);
+
+        // //팝업
+        // alert(typeof result);
+
+        //메소드 객체안에 특별한  기능
+        //함수
+
+        //오늘의 날짜: 객체 생성
+        var t =new Date();
+        console.log(typeof t);
+        console.log(t.getFullYear()+ '년'+(t.getMonth()+1) + '월'+ t.getDate() + '일');
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

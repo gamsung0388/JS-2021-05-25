@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>점심메뉴</title>
+    <script>
+        function selemenu(menu){
+            // console.log(menu);
+            console.log(document.getElementById('lunchmenu').firstChild);
+            //노드생성
+            var node = document.createTextNode(menu.value);//메뉴
+            var msg = document.getElementById('lunchmenu');
+            msg.replaceChild(node, msg.firstChild); //msg변경
+        }
+    </script>
+</head>
+
+<body>
+    <fieldset>
+        <legend>점심메뉴</legend>
+        <input type="radio" name="menu" value="자장면" onclick="selemenu(this)">자장면
+        <input type="radio" name="menu" value="짬뽕" onclick="selemenu(this)">짬뽕
+        <input type="radio" name="menu" value="탕수육" onclick="selemenu(this)">탕수육
+    </fieldset>
+    선택한 메뉴:
+    <label id="lunchmenu">
+    </label>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if문</title>
+    <script>
+        //짝,홀수 출력
+        // var a = prompt('숫자는?'); //입력함수
+        // console.log(typeof a);
+        // if(a%2 ==0){
+        //     document.write('<h2>짝수<h2>')
+        // }else{
+        //     document.write('<h2>홀수<h2>')
+        // }
+        
+        //값과 형 비교
+        // let a = 10, b ='10' ; //중복ㄴㄴ
+        // if(a==b){ //값만 비교
+        //     document.write('같다<br>');
+        // }else{
+        //     document.write('같지않다. <br>')
+        // }
+
+        // if(a===b){ //값과 형 비교
+        //     document.write('같다 <br>');
+        // }else{
+        //     document.write('같지않다 <br>');
+        // }
+
+        // c = a; //대입연산자
+        // document.write(c+'<br>');
+        
+        //확인창
+        // var result = confirm('삭제하시겠습니까?');
+        // console.log(result);
+        
+        // if (result){
+        //     document.write('삭제 완료.');
+        // }else{
+        //     document.write('삭제 취소.');
+        // }
+
+        //실습) 아이디와 패스워드 입력받아 체크
+        //id가 불일치, passwd 불일치
+
+        // const myid = 'java', mypw = '1111';
+        
+        // var userid= prompt('아이디는?');
+        // if(userid == myid){
+        //     var userpw= prompt('비밀번호는?');
+        //     if(userpw == mypasswd){
+        //         alert('로그인완료');
+        //      }else{
+        //         alert('비밀번호 불일치');
+        //     }
+        // }else{
+        //     document.write('아이디 불일치');
+        // }    
+
+        // //로그인 성공, 로그인 실패
+        // const myid = 'java', mypw = '1111';
+        // var userid= prompt('아이디는?');
+        // var userpw= prompt('비밀번호는?');
+        // if(myid == userid && mypw == userpw){
+        //     alert('로그인성공');
+        // }else{
+        //     alert('로그인 실패');
+        // }
+        
+        
+        //function
+        function LoginCheck(){
+            // alert('로그인창'); //자바스크립트 할때는 작은 따옴표
+            var myid = 'java', mypw = '1111';
+            const userid = document.getElementById('userid').value;
+            const userpw = document.getElementById('userpw').value; 
+            console.log(userid);
+            console.log(userpw);
+            if(userid ==myid){
+                if(userpw == mypw){
+                    alert('로그인 성공')
+                }else{
+                    alert('비밀번호가 잘못되었습니다.');
+                }
+            }else{
+                alert('아이디가 잘못되었습니다.');
+            }
+        
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <label >아이디:</label>
+        <input type="text" id = "userid"><br>
+        <label>패스워드:</label>
+        <input type="password" id="userpw"><br>
+        <input type="button" value="로그인"  onclick="LoginCheck()">
+        <button>회원가입</button>
+        <button >취소</button>
+    </form>
+</body>
+</html>

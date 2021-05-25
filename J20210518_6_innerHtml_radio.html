@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레디오</title>
+</head>
+<body>
+
+    <fieldset>
+        <input type="radio" name="favcolor" class="mycolor"  id="mycolor" value="red" onclick="selcol()">빨강
+        <input type="radio" name="favcolor" class="mycolor" id="mycolor" value="blue" onclick="selcol()">파랑
+        <input type="radio" name="favcolor" class="mycolor" id="mycolor" value="yello" onclick="selcol()" checked>노랑
+    </fieldset>
+    <div id="favcol"></div>
+    <script>
+        function selcol(){
+            // document.getElementById//단수
+            var colorElem = document.getElementsByName('favcolor');//복수 
+            console.log(colorElem.length);
+            for (var i = 0; i < colorElem.length; i++) {
+                if(colorElem[i].checked){ 
+                    // alert(colorElem[i].value);
+                    document.getElementById('favcol').innerHTML 
+                        ='당신이 좋아하는 색은 '+ colorElem[i].value; + '입니다';
+                }    
+            }   
+        }
+    </script>
+    
+</body>
+</html>

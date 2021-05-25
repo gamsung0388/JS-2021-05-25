@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>취미/특기</title>
+    <script>
+        function skillCheck(){
+            if (frmskill.skill.value==''){
+                alert('하나라도 선택하세요')
+            }else{
+                alert(frmskill.skill.value);
+                frmskill.submit();
+            }
+        }
+        //체크박스: 한개라도 선택여부
+        function hobbyCheck(){
+                console.log(frmhobby.hobby.length);
+                var check = false;//체크박스 체크여부
+               for (var i = 0; i < frmhobby.hobby.length; i++) {
+                    console.log(frmhobby.hobby[i].checked);
+                    if (frmhobby.hobby[i].checked){
+                    check = true;
+                    }
+                }
+                if(!check){
+                    alert('최소한 하나라도 선택해주세요')
+                }else{
+                    frmhobby.submit();
+                }
+        }
+        function selectpick(){
+            alert(frmDbms.dbms.value);
+        }
+        function filecheck(){
+            
+            if(frmfile.filename.value==''){
+                alert('파일을 넣으세요')
+            }else{
+                alert(frmfile.filename.value);
+                frmfile.submit();
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form name="frmskill" action="">
+        <!-- 라디오박스 -->
+        <fieldset>
+            <legend>특기</legend>
+            <input type="radio" name="skill" value="gamemake" >게임만들기
+            <input type="radio" name="skill" value="novlemake">소설작성
+            <input type="radio" name="skill" value="tarot">타로상담
+            <button type="button" onclick="skillCheck()">전송</button>
+        </fieldset>
+    </form>
+    <form name="frmhobby" action="">
+        <!-- 체크박스 같은이름으로 여러개-->
+        <fieldset>
+            <legend>취미</legend>
+            <input type="checkbox" name="hobby" value="cycle">자전거
+            <input type="checkbox" name="hobby" value="read">독서
+            <input type="checkbox" name="hobby" value="game">게임
+            <button type="button" onclick="hobbyCheck()">전송</button>
+        </fieldset>
+    </form>
+    <form name="frmDbms" action="">
+        <!-- 셀렉트박스 -->
+        <fieldset>
+           <select name="dbms" id="">
+               <option value="oracle">오라클</option>
+               <option value="mysql">MYSQL</option>
+               <option value="mssql">MSSQL</option>
+               <option value="sqlite">SQLITE</option>
+           </select>
+           <button type="button" onclick="selectpick()">전송</button>
+        </fieldset>
+    </form>
+    <form name="frmfile">
+        <!-- 파일 -->
+        파일<input type="file" name="filename" >
+        <button type="button" onclick="filecheck()">전송</button>
+    </form>       
+    
+</body>
+</html>
